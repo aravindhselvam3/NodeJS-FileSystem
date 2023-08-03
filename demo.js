@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 
 // API endpoint to retrieve all the text files in the particular folder
 app.get('/text', (req, res) => {
-  const folderPath = '/'; 
+  const folderPath = '/opt/render/project/src'; 
   fs.readdir(folderPath, (err, files) => {
     if (err) {
       res.status(500).send('Error reading folder');
